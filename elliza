@@ -1,0 +1,29 @@
+void setup() {
+  size(500, 100);
+}
+
+void draw() {
+  background(0);
+  textSize(48);
+
+  if (hour() < 5) {
+    //between midnight and 5AM
+    text("Tidur, Surya!", 20, height-20);
+  } 
+  else if (hour() < 12) {
+    //between 5AM and noon
+    text("Pagi, Surya!", 20, height-20);
+  } 
+  else if (hour() < 16) {
+    //between noon and 4PM
+    text("Siang, Surya!", 20, height-20);
+  } 
+  else if (hour() < 21) {
+    //between 4PM and 9PM,
+    text("Sore, Surya!", 20, height-20);
+  } 
+  else {
+    //between 9PM and midnight
+    text("Malam, Surya!", 20, height-20);
+  }
+}
